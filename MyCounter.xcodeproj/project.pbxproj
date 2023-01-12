@@ -13,9 +13,8 @@
 		AFFDBA32296F35D400C45709 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDBA30296F35D400C45709 /* Main.storyboard */; };
 		AFFDBA34296F35D500C45709 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFFDBA33296F35D500C45709 /* Assets.xcassets */; };
 		AFFDBA37296F35D500C45709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFFDBA35296F35D500C45709 /* LaunchScreen.storyboard */; };
-		AFFDBA42296F35D500C45709 /* MyCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDBA41296F35D500C45709 /* MyCounterTests.swift */; };
-		AFFDBA4C296F35D500C45709 /* MyCounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDBA4B296F35D500C45709 /* MyCounterUITests.swift */; };
-		AFFDBA4E296F35D500C45709 /* MyCounterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDBA4D296F35D500C45709 /* MyCounterUITestsLaunchTests.swift */; };
+		AFFDBA5B296F368600C45709 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDBA5A296F368600C45709 /* Counter.swift */; };
+		AFFDBA5D296FC03200C45709 /* CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFDBA5C296FC03200C45709 /* CounterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +44,9 @@
 		AFFDBA36296F35D500C45709 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFFDBA38296F35D500C45709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFFDBA3D296F35D500C45709 /* MyCounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCounterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFFDBA41296F35D500C45709 /* MyCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCounterTests.swift; sourceTree = "<group>"; };
 		AFFDBA47296F35D500C45709 /* MyCounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFFDBA4B296F35D500C45709 /* MyCounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCounterUITests.swift; sourceTree = "<group>"; };
-		AFFDBA4D296F35D500C45709 /* MyCounterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCounterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFFDBA5A296F368600C45709 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		AFFDBA5C296FC03200C45709 /* CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,6 @@
 			children = (
 				AFFDBA29296F35D400C45709 /* MyCounter */,
 				AFFDBA40296F35D500C45709 /* MyCounterTests */,
-				AFFDBA4A296F35D500C45709 /* MyCounterUITests */,
 				AFFDBA28296F35D400C45709 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +98,7 @@
 			children = (
 				AFFDBA2A296F35D400C45709 /* AppDelegate.swift */,
 				AFFDBA2C296F35D400C45709 /* SceneDelegate.swift */,
+				AFFDBA5A296F368600C45709 /* Counter.swift */,
 				AFFDBA2E296F35D400C45709 /* ViewController.swift */,
 				AFFDBA30296F35D400C45709 /* Main.storyboard */,
 				AFFDBA33296F35D500C45709 /* Assets.xcassets */,
@@ -113,18 +111,9 @@
 		AFFDBA40296F35D500C45709 /* MyCounterTests */ = {
 			isa = PBXGroup;
 			children = (
-				AFFDBA41296F35D500C45709 /* MyCounterTests.swift */,
+				AFFDBA5C296FC03200C45709 /* CounterTests.swift */,
 			);
 			path = MyCounterTests;
-			sourceTree = "<group>";
-		};
-		AFFDBA4A296F35D500C45709 /* MyCounterUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AFFDBA4B296F35D500C45709 /* MyCounterUITests.swift */,
-				AFFDBA4D296F35D500C45709 /* MyCounterUITestsLaunchTests.swift */,
-			);
-			path = MyCounterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFDBA5B296F368600C45709 /* Counter.swift in Sources */,
 				AFFDBA2F296F35D400C45709 /* ViewController.swift in Sources */,
 				AFFDBA2B296F35D400C45709 /* AppDelegate.swift in Sources */,
 				AFFDBA2D296F35D400C45709 /* SceneDelegate.swift in Sources */,
@@ -268,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFDBA42296F35D500C45709 /* MyCounterTests.swift in Sources */,
+				AFFDBA5D296FC03200C45709 /* CounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +266,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFFDBA4C296F35D500C45709 /* MyCounterUITests.swift in Sources */,
-				AFFDBA4E296F35D500C45709 /* MyCounterUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +358,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = MyCounter;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -423,6 +412,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = MyCounter;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

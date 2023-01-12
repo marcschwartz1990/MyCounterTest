@@ -1,24 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCounter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-6V-Hkf">
+                                <rect key="frame" x="38" y="783" width="31.666666666666671" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="1"/>
+                                <connections>
+                                    <action selector="touchIncrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xi8-0C-6IP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-RM-byb">
+                                <rect key="frame" x="179.66666666666666" y="783" width="34" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="2"/>
+                                <connections>
+                                    <action selector="touchIncrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dV3-rm-leo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPz-HP-kcg">
+                                <rect key="frame" x="322" y="783" width="35" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="5"/>
+                                <connections>
+                                    <action selector="touchIncrementButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCJ-0x-Uu3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Increment Counter by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOg-S1-dAq">
+                                <rect key="frame" x="111.66666666666669" y="752" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGv-Hp-7xY">
+                                <rect key="frame" x="172.33333333333334" y="390.66666666666669" width="48.666666666666657" height="96"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I1-m7-CAd">
+                                <rect key="frame" x="119.33333333333333" y="59" width="154.66666666666669" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ob8-RM-byb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2HW-6V-Hkf" secondAttribute="trailing" id="1H9-GN-1so"/>
+                            <constraint firstItem="NPz-HP-kcg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ob8-RM-byb" secondAttribute="trailing" id="4h2-Yd-Jvk"/>
+                            <constraint firstItem="8I1-m7-CAd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Mh-ql-QGF"/>
+                            <constraint firstItem="Ob8-RM-byb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Ti-6J-CNA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NPz-HP-kcg" secondAttribute="trailing" constant="36" id="Jdx-7f-RY1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ob8-RM-byb" secondAttribute="bottom" id="PEH-D8-w89"/>
+                            <constraint firstItem="UGv-Hp-7xY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TnJ-xM-3eb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NPz-HP-kcg" secondAttribute="bottom" id="VXa-2S-zw7"/>
+                            <constraint firstItem="UGv-Hp-7xY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="a6d-yo-XRu"/>
+                            <constraint firstItem="kOg-S1-dAq" firstAttribute="bottom" secondItem="Ob8-RM-byb" secondAttribute="top" constant="-10" id="aOB-JH-S4S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2HW-6V-Hkf" secondAttribute="bottom" id="dmM-jh-csw"/>
+                            <constraint firstItem="kOg-S1-dAq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="g33-D5-mUt"/>
+                            <constraint firstItem="2HW-6V-Hkf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="hnJ-4Y-IWL"/>
+                            <constraint firstItem="8I1-m7-CAd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kgu-1R-iWw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="UGv-Hp-7xY" id="YqF-7e-zDt"/>
+                        <outletCollection property="incrementButtons" destination="NPz-HP-kcg" collectionClass="NSMutableArray" id="XJ6-d9-Odf"/>
+                        <outletCollection property="incrementButtons" destination="Ob8-RM-byb" collectionClass="NSMutableArray" id="eRV-M1-dix"/>
+                        <outletCollection property="incrementButtons" destination="2HW-6V-Hkf" collectionClass="NSMutableArray" id="Sdz-T9-vDg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-82" y="-27"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
